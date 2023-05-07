@@ -1,0 +1,54 @@
+Entities:
+1. User
+2. Order
+3. Product
+4. Address
+
+Attributes:
+User:
+- User ID (PK)
+- First Name
+- Last Name
+- Email
+- Password Hash
+
+Order:
+- Order ID (PK)
+- User ID(FK)
+- Product ID(FK)
+- Quantity 
+- Total Price 
+- Order Date 
+
+Product:
+- Product ID (PK)
+- Name 
+ - Description  
+_ Price_ 
+
+Address:
+ - Location (PK)   
+ - City  
+ - State   
+  - Pincode  
+
+Type of Attributes:
+1. PK – Primary Key – Attribute that uniquely identifies each instance in an entity.
+2. FK – Foreign Key – Attribute that refers to the primary key to link two entities.
+
+Relationships: 
+1. A user can place multiple orders.
+2. An order can contain multiple products with different quantities.
+3. Each product has a unique identifier which corresponds to an order placed by a customer.
+4. Multiple customers can have the same delivery address, however, each delivery address is associated with only one customer.
+
+Cardinalities: 
+1. One user can place many orders and one order has only one user associated with it.
+2.One Order may contain many products and each product could be selected for more than one order.
+3.One Delivery Address belongs to only one Customer.
+
+Primary Keys:  
+1.User table => User ID(PK) 
+2.Order table =>Order ID(PK)
+3.Product table=>Product Id(PK)
+4.Address=>Location(PK)
